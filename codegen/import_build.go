@@ -2,7 +2,6 @@ package codegen
 
 import (
 	"fmt"
-	"go/build"
 	"sort"
 	"strconv"
 	"strings"
@@ -56,13 +55,10 @@ func (s *Imports) add(path string) *Import {
 		return existing
 	}
 
-	pkg, err := build.Default.Import(path, s.destDir, 0)
-	if err != nil {
-		panic(err)
-	}
+	name := pkgName(path, s.destDir)
 
 	imp := &Import{
-		Name: pkg.Name,
+		Name: name,
 		Path: path,
 	}
 	s.imports = append(s.imports, imp)
