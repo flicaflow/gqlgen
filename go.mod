@@ -1,0 +1,30 @@
+module github.com/99designs/gqlgen
+
+require (
+	github.com/agnivade/levenshtein v0.0.0-20180303095733-1787a73e302c
+	github.com/davecgh/go-spew v1.1.0
+	github.com/go-chi/chi v3.3.2+incompatible
+	github.com/gogo/protobuf v1.0.0
+	github.com/gorilla/context v0.0.0-20160226214623-1ea25387ff6f
+	github.com/gorilla/mux v1.6.1
+	github.com/gorilla/websocket v1.2.0
+	github.com/inconshreveable/mousetrap v1.0.0
+	github.com/mitchellh/mapstructure v0.0.0-20180203102830-a4e142e9c047
+	github.com/opentracing-contrib/go-stdlib v0.0.0-20180313041242-367231351874
+	github.com/opentracing/basictracer-go v1.0.0
+	github.com/opentracing/opentracing-go v1.0.2
+	github.com/pkg/errors v0.8.0
+	github.com/pmezard/go-difflib v1.0.0
+	github.com/shurcooL/httpfs v0.0.0-20171119174359-809beceb2371
+	github.com/shurcooL/vfsgen v0.0.0-20180121065927-ffb13db8def0
+	github.com/spf13/cobra v0.0.3
+	github.com/spf13/pflag v1.0.1
+	github.com/stretchr/testify v1.2.1
+	github.com/vektah/dataloaden v0.0.0-20180713105249-314ac81052ee
+	github.com/vektah/gqlparser v0.0.0-20180810055231-c063da4fdb84
+	golang.org/x/net v0.0.0-20180404174746-b3c676e531a6
+	golang.org/x/tools v0.0.0-20180215025520-ce871d178848
+	gopkg.in/yaml.v2 v2.2.1
+	sourcegraph.com/sourcegraph/appdash v0.0.0-20180110180208-2cc67fd64755
+	sourcegraph.com/sourcegraph/appdash-data v0.0.0-20151005221446-73f23eafcf67
+)
