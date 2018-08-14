@@ -2,9 +2,7 @@ package codegen
 
 import (
 	"fmt"
-	"go/build"
 	"go/types"
-	"os"
 
 	"github.com/pkg/errors"
 	"golang.org/x/tools/go/loader"
@@ -200,15 +198,4 @@ func newLoader(namedTypes NamedTypes, allowErrors bool) loader.Config {
 		}
 	}
 	return conf
-}
-
-func resolvePkg(pkgName string) (string, error) {
-	cwd, _ := os.Getwd()
-
-	pkg, err := build.Default.Import(pkgName, cwd, build.FindOnly)
-	if err != nil {
-		return "", err
-	}
-
-	return pkg.ImportPath, nil
 }

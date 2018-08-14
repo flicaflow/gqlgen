@@ -13,7 +13,7 @@ import (
 func pkgName(path, destDir string) string {
 	pkgs, err := packages.Load(nil, path)
 	if err != nil {
-		panic(err)
+		panic("PANIC: loading path " + path + " : " + err.Error())
 	}
 
 	if len(pkgs) != 1 {
@@ -21,4 +21,14 @@ func pkgName(path, destDir string) string {
 	}
 
 	return pkgs[0].Name
+}
+
+func resolvePkg(pkgName string) (string, error) {
+
+	pkgs, err := packages.Load(nil, pkgName)
+	if len(pkgs) != 1 {
+		panic("expected exactly on package " + pkgName + ", got " + strconv.Itoa(len(pkgs)))
+	}
+
+	return pkgs[0].PkgPath, err
 }
